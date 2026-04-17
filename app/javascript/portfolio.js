@@ -66,4 +66,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.stagger-float').forEach(el => {
         observer.observe(el);
     });
+
+    // 3. Hero Video Fade-in Optimization
+    const heroVideo = document.getElementById('hero-bg-video');
+    if (heroVideo) {
+        // If already playing or can play, show it
+        if (heroVideo.readyState >= 3) {
+            heroVideo.classList.add('video-ready');
+        } else {
+            heroVideo.addEventListener('playing', () => {
+                heroVideo.classList.add('video-ready');
+            }, { once: true });
+        }
+    }
 });

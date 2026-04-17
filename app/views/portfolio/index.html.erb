@@ -45,9 +45,15 @@
   <!-- Hero Section -->
   <section class="hero hero-bottom-centered">
     <div class="hero-video-wrapper">
-      <!-- Make sure to place your video at app/assets/videos/background.mp4 or public/background.mp4 -->
-      <!-- The poster attribute will hold the first frame, and it plays automatically -->
-      <video id="hero-bg-video" src="/background.mp4" autoplay loop muted playsinline poster="/poster.jpg"></video>
+      <video id="hero-bg-video" 
+             src="/background.mp4" 
+             autoplay 
+             loop 
+             muted 
+             playsinline 
+             poster="/poster.jpg"
+             preload="metadata"
+             class="video-loading"></video>
       <div class="hero-fade-overlay"></div>
     </div>
 

@@ -142,8 +142,14 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8; /* Subtle transparency so text pops more if video is bright */
+    opacity: 0; /* Hidden by default for smooth fade-in */
+    transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
+#hero-bg-video.video-ready {
+    opacity: 0.8; /* Reverting to the brand-approved opacity once loaded */
+}
+
 
 .hero-fade-overlay {
     position: absolute;
