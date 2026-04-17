@@ -74,7 +74,7 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # Don't log params that are marked as sensitive in the log file.
-  config.active_record.log_selector = :info
+
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
